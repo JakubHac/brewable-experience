@@ -19,6 +19,12 @@
   "entrypoints": {
     "main": [
       "com.hacah.brewable_experience.BrewableExperience"
+    ],
+    "client": [
+      "com.hacah.brewable_experience.config.ConfigSync"
+    ],
+    "server": [
+      "com.hacah.brewable_experience.config.ConfigSync"
     ]
   },
   "mixins": [

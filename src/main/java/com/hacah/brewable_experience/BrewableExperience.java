@@ -15,6 +15,7 @@ import java.nio.file.Path;
 
 public class BrewableExperience implements ModInitializer {
 
+    public static final String MODID = "brewable_experience";
     private static final JsonParser parser = new JsonParser();
     private static final Gson gson = new GsonBuilder().setPrettyPrinting().create();
 

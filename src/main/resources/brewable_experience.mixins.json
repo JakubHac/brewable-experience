@@ -4,9 +4,8 @@
   "package": "com.hacah.brewable_experience.mixin",
   "compatibilityLevel": "JAVA_16",
   "mixins": [
-  ],
-  "client": [
-    "MixinBrewRegistry"
+    "MixinBrewRegistry",
+    "PlayerJoinMixin"
   ],
   "injectors": {
     "defaultRequire": 1
