@@ -18,7 +18,6 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public class MixinBrewRegistry {
 
     @Inject(method = "isValidIngredient", at= @At("HEAD"), cancellable = true)
-    //@Inject(method = "method_8077", at= @At("HEAD"), cancellable = true)
     private static void isValidCustomIngredient(ItemStack stack, CallbackInfoReturnable<Boolean> cir) {
         Logger.DebugLog("Checking ingredient: " + stack.getItem().getName());
         Item potion = stack.getItem();
@@ -32,7 +31,6 @@ public class MixinBrewRegistry {
     }
 
     @Inject(method = "hasRecipe", at = @At("HEAD"), cancellable = true)
-    //@Inject(method = "method_8072", at = @At("HEAD"), cancellable = true)
     private static void hasCustomRecipe(ItemStack input, ItemStack ingredient, CallbackInfoReturnable<Boolean> cir) {
         Logger.DebugLog("Checking recipe, input: " + input.getItem().getName() + " ingredient: " + ingredient.getItem().getName());
         Item InputItem = ingredient.getItem();
@@ -49,7 +47,6 @@ public class MixinBrewRegistry {
     }
 
     @Inject(method = "craft", at = @At("HEAD"), cancellable = true)
-    //@Inject(method = "method_8078", at = @At("HEAD"), cancellable = true)
     private static void CustomCraft(ItemStack input, ItemStack ingredient, CallbackInfoReturnable<ItemStack> cir) {
         if (!ingredient.isEmpty()) {
             Potion fromPotion = PotionUtil.getPotion(ingredient);
