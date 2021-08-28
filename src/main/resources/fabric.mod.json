@@ -17,6 +17,9 @@
 
   "environment": "*",
   "entrypoints": {
+    "main": [
+      "com.hacah.brewable_experience.BrewableExperience"
+    ]
   },
   "mixins": [
     "brewable_experience.mixins.json"
